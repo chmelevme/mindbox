@@ -9,7 +9,8 @@ parser.add_argument('n_first_id', type=int, nargs='?', default=0,
 
 def calc_groups_coutn(n_customers: int, n_first_id: int = 0):
     res = {}
-    assert n_customers != 0
+    assert n_customers > 0
+    assert n_first_id > 0 
 
     for i in range(n_first_id, n_first_id + n_customers):
         num = sum(map(int, list(str(i))))
